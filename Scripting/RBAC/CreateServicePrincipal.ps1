@@ -40,7 +40,7 @@ Start-Sleep -s 10
 
 #add Owner role to service principal so it can be used going forward for provisioning
 #the -Scope argument for New-AzureRmRoleAssignment expects the format "/subscriptions/<id>"
-$subscriptionString =  "/subscriptions/" + $assignedScope 
+$subscriptionString =  "/subscriptions/" +$assignedScope 
 
 New-AzureRmRoleAssignment -RoleDefinitionName Owner -ServicePrincipalName $azureAdApplication.ApplicationId.Guid -Scope $subscriptionString
 
