@@ -3,7 +3,7 @@ param (
     [string]$appName = "jofultzApp5", #$(throw "Please specify -appName"),
     [string]$uri = "https://www.jofultz5.org", #$(throw "Please specify -uri"),
     [string] $certStore = "cert:\CurrentUser\My",  #defaulting to CurrentUser, but will not want it in this location for service execution
-    [string] $assignedScope = "a03d98a2-7ef5-4fb2-8a94-f2980f7d50a1" #defaulting to Darren's to ease debug
+    [string] $assignedScope = "[subscription ID]" 
 )
 
 #to use the same principal on another machine, the cert will have to exported from the
@@ -45,5 +45,3 @@ $subscriptionString =  "/subscriptions/" +$assignedScope
 New-AzureRmRoleAssignment -RoleDefinitionName Owner -ServicePrincipalName $azureAdApplication.ApplicationId.Guid -Scope $subscriptionString
 
 
-# 72f988bf-86f1-41af-91ab-2d7cd011db47
-# darren sub ID: a03d98a2-7ef5-4fb2-8a94-f2980f7d50a1
