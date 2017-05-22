@@ -1,1 +1,1 @@
-touch 123.txt
+touch /tmp/123.txt
