@@ -1,0 +1,60 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "southcentralus"
+        },
+        "resourceGroupName": {
+            "value": "linux-custscript"
+        },
+        "scriptParam": {
+            "value": "/tmp/nameFromParam.txt"
+        },
+        "virtualMachineName": {
+            "value": "testpostscript"
+        },
+        "virtualMachineSize": {
+            "value": "Standard_F1s"
+        },
+        "adminUsername": {
+            "value": "jofultz"
+        },
+        "virtualNetworkName": {
+            "value": "scratch-vnet"
+        },
+        "networkInterfaceName": {
+            "value": "testpostscript700"
+        },
+        "networkSecurityGroupName": {
+            "value": "testpostscript-nsg"
+        },
+        "adminPassword": {
+            "value": "jofultzPa55word"
+        },
+        "diagnosticsStorageAccountName": {
+            "value": "scratchdiag175"
+        },
+        "diagnosticsStorageAccountType": {
+            "value": "Standard_LRS"
+        },
+        "diagnosticsStorageAccountId": {
+            "value": "Microsoft.Storage/storageAccounts/scratchdiag175"
+        },
+        "addressPrefix": {
+            "value": "10.1.0.0/24"
+        },
+        "subnetName": {
+            "value": "default"
+        },
+        "subnetPrefix": {
+            "value": "10.1.0.0/24"
+        },
+        "publicIpAddressName": {
+            "value": "testpostscript-ip"
+        },
+        "publicIpAddressType": {
+            "value": "Dynamic"
+        }
+    }
+}
